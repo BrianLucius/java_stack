@@ -34,7 +34,7 @@ public class TestCafe {
         ArrayList<String> customers = new ArrayList<String>();
         // --- Test 4 times ---
         for (int i = 0; i < 4; i++) {
-            // appTest.addCustomer(customers);
+            appTest.addCustomer(customers);
             System.out.println("\n");
         }
 
@@ -42,6 +42,8 @@ public class TestCafe {
 
         appTest.printPriceChart("Regular blend", 2.00, 0.50, 4);
 
-        
+        appTest.addCustomers(customers);
+        System.out.println("The customer list is: " + customers);
+
     }
 }

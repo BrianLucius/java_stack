@@ -43,11 +43,24 @@ public class CafeUtil {
         }
     }
 
-        public void printPriceChart(String product, double price, double discount, int maxQuantity) {
+    public void printPriceChart(String product, double price, double discount, int maxQuantity) {
         System.out.println(product);
 
         for (int i = 1; i <= maxQuantity; i++) {
             System.out.printf("%s - %.2f\n", i, (price * i) - ((i-1)*discount));
+        }
+    }
+
+    public void addCustomers(ArrayList<String> customers) {
+        String userName = "";
+
+        while (!userName.equals("q") && !userName.equals("Q")) {
+            System.out.println("Please enter the customer's name:");
+            userName = System.console().readLine();
+
+            System.out.printf("Adding customer %s!\n", userName);
+            customers.add(userName);
+            System.out.println(customers);
         }
     }
 }
