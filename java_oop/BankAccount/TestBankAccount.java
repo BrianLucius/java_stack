@@ -13,5 +13,7 @@ public class TestBankAccount{
         anotherAccount.setAccountWithdraw("checking", 10000.00);
         anotherAccount.getAccountBalance();
 
+        System.out.printf("Total bank accounts: %d\n",BankAccount.getNumBankAccounts());
+        System.out.printf("Total bank balance: $%.2f\n", BankAccount.getTotalBankBalance());
     }
 }

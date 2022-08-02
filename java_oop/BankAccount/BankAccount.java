@@ -7,13 +7,14 @@ public class BankAccount{
     private double totalAccountBalance;
 
     private static int totalNumAccounts;
+    private static double totalBankBalance;
 
     //constructor
     public BankAccount() {
         this.checkingBalance = 0.0;
         this.savingsBalance = 0.0;
         this.totalAccountBalance = 0.0;
-        this.totalNumAccounts+=1;
+        totalNumAccounts+=1;
     }
 
     //getter
@@ -30,6 +31,14 @@ public class BankAccount{
         return this.savingsBalance;
     }
 
+    static double getTotalBankBalance() {
+        return totalBankBalance;
+    }
+
+    static int getNumBankAccounts() {
+        return totalNumAccounts;
+    }
+
     public void getAccountBalance() {
         System.out.println("Account Number: " + this.accountNumber);
         System.out.println("Checking Balance: " + this.checkingBalance);
@@ -44,10 +53,12 @@ public class BankAccount{
         case "savings":
             this.savingsBalance+=amount;
             this.totalAccountBalance+=amount;
+            totalBankBalance+=amount;
             break;
         case "checking":
             this.checkingBalance+=amount;
             this.totalAccountBalance+=amount;
+            totalBankBalance+=amount;
             break;
         default:
             System.out.println("That is not a valid account type!");
@@ -63,6 +74,7 @@ public class BankAccount{
             } else {
                 this.savingsBalance-=amount;
                 this.totalAccountBalance-=amount;
+                totalBankBalance-=amount;
                 break;
             }
         case "checking":
@@ -72,6 +84,7 @@ public class BankAccount{
             } else {
                 this.checkingBalance-=amount;
                 this.totalAccountBalance-=amount;
+                totalBankBalance-=amount;
                 break;
             }
         default:
