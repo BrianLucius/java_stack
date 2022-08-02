@@ -4,9 +4,9 @@ public class BankAccount{
     private double checkingBalance;
     private double savingsBalance;
     private String accountNumber = getNewAccountNumber();
+    private double totalAccountBalance;
 
     private static int totalNumAccounts;
-    private static double totalAccountBalance;
 
     //constructor
     public BankAccount() {
