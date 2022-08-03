@@ -46,7 +46,7 @@
       } else {
         newNode.next = this.head;
         this.head = newNode;
-      }      
+      }
     }
   
       /**
