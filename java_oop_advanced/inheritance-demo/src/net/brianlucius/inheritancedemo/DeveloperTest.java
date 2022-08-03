@@ -15,16 +15,16 @@ public class DeveloperTest {
 		dev2.addLanguages("Java");
 		dev2.displayStatus();
 		
-		Developer dev3 = new FrontEndDeveloper();
+		FrontEndDeveloper dev3 = new FrontEndDeveloper();
 		dev3.displayStatus();
 		
-		Developer dev4 = new FrontEndDeveloper("Julie Andrews");
-		((FrontEndDeveloper) dev4).raiseSalary(100000);
-//		dev4.raiseSalary(100000);
+		FrontEndDeveloper dev4 = new FrontEndDeveloper("Julie Andrews");
+		dev4.raiseSalary(100000);
 		dev4.displayStatus();
 
-		Developer dev5 = new Backenddeveloper();
+		Backenddeveloper dev5 = new Backenddeveloper();
 		dev5.displayStatus();
+
 	}
 
 }
