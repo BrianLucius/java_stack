@@ -1,2 +1,4 @@
 # Exclude all class files
 *.class
+
+/.metadata/
