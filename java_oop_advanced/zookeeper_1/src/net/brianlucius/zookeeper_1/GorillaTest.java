@@ -1,4 +1,4 @@
-package zookeeper_1;
+package net.brianlucius.zookeeper_1;
 
 public class GorillaTest {
 
