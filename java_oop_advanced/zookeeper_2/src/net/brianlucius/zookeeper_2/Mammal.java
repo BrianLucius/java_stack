@@ -7,6 +7,10 @@ public class Mammal {
 		energyLevel = 100;
 	}
 	
+	public Mammal(int energyLevel) {
+		this.energyLevel = energyLevel;
+	}
+	
 	public int displayEnergy() {
 		System.out.printf("Energy level: %s\n", energyLevel);
 		return energyLevel;
@@ -19,6 +23,5 @@ public class Mammal {
 	public void setEnergyLevel(int energyLevel) {
 		this.energyLevel = energyLevel;
 	}
-	
 	
 }

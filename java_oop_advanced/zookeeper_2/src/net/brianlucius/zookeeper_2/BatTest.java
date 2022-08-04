@@ -3,7 +3,7 @@ package net.brianlucius.zookeeper_2;
 public class BatTest {
 
 	public static void main(String[] args) {
-		Bat batman = new Bat();
+		Bat batman = new Bat(300);
 		
 		batman.displayEnergy();
 		

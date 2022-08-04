@@ -1,6 +1,11 @@
 package net.brianlucius.zookeeper_2;
 
 public class Gorilla extends Mammal {
+	
+	public Gorilla() {
+		super();
+	}
+	
 	public void throwSomething(String something) {
 		System.out.printf("The Gorilla has flung %s...\n", something);
 		super.setEnergyLevel(super.getEnergyLevel() - 5);

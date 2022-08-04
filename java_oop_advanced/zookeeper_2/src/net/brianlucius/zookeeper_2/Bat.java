@@ -3,7 +3,11 @@ package net.brianlucius.zookeeper_2;
 public class Bat extends Mammal{
 
 	public Bat() {
-		super.setEnergyLevel(300);
+		super();
+	}
+	
+	public Bat(int energyLevel) {
+		super(energyLevel);
 	}
 
 	public void fly() {
