@@ -7,15 +7,17 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
 	
 	private Integer employeeID;
 	private String role;
-    private ArrayList<String> securityIncidents = new ArrayList<String>();  // Question: can this be instantiated separately/later?
+    private ArrayList<String> securityIncidents;
 	
     public AdminUser(Integer id) {
 		super(id);
+		securityIncidents = new ArrayList<String>();
 	}
 
 	public AdminUser(Integer id, String role) {
 		super(id);
 		this.role = role;
+		securityIncidents = new ArrayList<String>();
 	}
     
 	@Override
