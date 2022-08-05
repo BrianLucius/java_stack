@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+#currentDate {
+	color: blue;
+	font-size: 3rem;
+}
+
+#currentTime {
+	color: green;
+	font-size: 3rem;
+}
