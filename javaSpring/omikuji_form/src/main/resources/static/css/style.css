@@ -1,0 +1,18 @@
+.background {
+            display: block;
+            position: relative;
+}
+
+.background::after {
+    content: "";
+    background: url("https://et-website.s3.amazonaws.com/uploads/2019/02/Enchanting-Travels-Japan-Tours-Miyajima-Hiroshima-Japan-floating-shrine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
