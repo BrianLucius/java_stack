@@ -12,26 +12,13 @@
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
-<title>Review form</title>
+<title>Welcome To My Page</title>
 </head>
 <body>
-	<h1>Review Form</h1>
-	<form action="/process" method="POST">
-	<input type="hidden" name="reviewer" value="Alex Miller" />
-	<div>
-		<label>Product</label>
-		<input type="text" name="product"/>
-	</div>
-	<div>
-		<label>Comments</label>
-		<textarea name="comment"></textarea>
-	</div>
-	<div>
-		<h3>${error}</h3>
-		<label>Rating</label>
-		<input type="number" name="rating"/>
-	</div>
-	<input type="submit" value="Submit" />
-	</form>
+<h1>Reservation Details</h1>
+<h4>Name: <c:out value="${name}"/></h4>
+<h4>Number of People: <c:out value="${numOfPeople}"/></h4>
+<h4>Reservation Date: <fmt:formatDate type="date" pattern="MMMM dd, yyyy" value="${reservationDate}"/></h4>
+<h4>Reservation Time: <fmt:formatDate type="time" pattern="h:mm a" value="${reservationTime}"/></h4>
 </body>
 </html>

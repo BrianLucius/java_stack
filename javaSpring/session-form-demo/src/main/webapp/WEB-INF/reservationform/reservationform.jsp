@@ -12,26 +12,27 @@
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
-<title>Review form</title>
+<title>Welcome To My Page</title>
 </head>
 <body>
-	<h1>Review Form</h1>
-	<form action="/process" method="POST">
-	<input type="hidden" name="reviewer" value="Alex Miller" />
+	<form action="/processReservation" method="POST">
 	<div>
-		<label>Product</label>
-		<input type="text" name="product"/>
+		<label for="">Name:</label>
+		<input type="text" name="name" id="" />
 	</div>
 	<div>
-		<label>Comments</label>
-		<textarea name="comment"></textarea>
+		<label for="">Number of people:</label>
+		<input type="number" name="numOfPeople" id="" />
 	</div>
 	<div>
-		<h3>${error}</h3>
-		<label>Rating</label>
-		<input type="number" name="rating"/>
+		<label for="">Reservation Date:</label>
+		<input type="date" name="reservationDate" id="" />
 	</div>
-	<input type="submit" value="Submit" />
+	<div>
+		<label for="">Reservation Time:</label>
+		<input type="time" name="reservationTime" id="" />
+	</div>
+		<input type="submit" value="Reserve!" />
 	</form>
 </body>
 </html>

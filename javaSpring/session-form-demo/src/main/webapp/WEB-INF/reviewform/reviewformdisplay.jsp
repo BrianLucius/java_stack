@@ -18,5 +18,6 @@
 	<h3>Product: ${product}</h3>
 	<h3>Comment: ${comment}</h3>
 	<h3>Rating: ${rating}</h3>
+	<h3>Reviewer: ${reviewer}</h3>
 </body>
 </html>
