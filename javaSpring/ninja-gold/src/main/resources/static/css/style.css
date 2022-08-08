@@ -1,0 +1,94 @@
+.background {
+            display: block;
+            position: relative;
+}
+
+.background::after {
+    content: "";
+    background: url("https://cdn1.vectorstock.com/i/1000x1000/23/60/pixel-8bit-game-background-with-ground-vector-14922360.jpg") center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.farmBackground {
+            display: block;
+            position: relative;
+}
+
+.farmBackground::after {
+    content: "";
+    background: url("https://cdna.artstation.com/p/assets/images/images/035/920/336/large/edward-still.jpg?1616256615") center center;
+	background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.caveBackground {
+            display: block;
+            position: relative;
+}
+
+.caveBackground::after {
+    content: "";
+    background: url("https://i.stack.imgur.com/YYpxy.png") center center;
+	background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.houseBackground {
+            display: block;
+            position: relative;
+}
+
+.houseBackground::after {
+    content: "";
+    background: url("https://media.istockphoto.com/vectors/simple-flat-pixel-art-illustration-of-cartoon-landscape-of-a-house-by-vector-id1331803985?k=20&m=1331803985&s=612x612&w=0&h=q7uEyPUotTcdyPcu8UEvIML2Wr9w6D1cHqWq1sqoStk=") center center;
+	background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.questBackground {
+            display: block;
+            position: relative;
+}
+
+.questBackground::after {
+    content: "";
+    background: url("https://venturebeat.com/wp-content/uploads/2021/02/dragon-quest-iii-the-seeds-of-salvation-switch-screenshot04.jpg?resize=1024%2C576&strip=all") center center;
+	background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
