@@ -17,9 +17,19 @@ public class MainController {
 	@RequestMapping(value={"/"})
 	public String main(HttpSession session) {
 		ArrayList<String> activities = new ArrayList<String>();
+		if (session.getAttribute("gold") == null) {
+			session.setAttribute("gold", 0);
+			session.setAttribute("activities", activities);
+		}
+		return "index.jsp";
+	}
+	
+	@RequestMapping(value="/reset", method=RequestMethod.POST)
+	public String play(HttpSession session) {
+		ArrayList<String> activities = new ArrayList<String>();
 		session.setAttribute("gold", 0);
 		session.setAttribute("activities", activities);
-		return "index.jsp";
+		return "redirect:/gold";
 	}
 	
 	@RequestMapping(value={"/gold","/Gold"})

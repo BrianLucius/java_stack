@@ -17,7 +17,14 @@
 <body class="background min-vh-100">
 	<div class="container p-5 mx-auto">
 		<div id="score" class="row mt-5 mb-5">
-		<h3>Your Gold: <img src="https://cdn4.vectorstock.com/i/thumb-large/90/53/coin-gold-pixelated-icon-vector-11699053.jpg" height="50px" alt="gold coin" /> <c:out value="${gold}"/></h3>
+			<div class="col-10">
+			<h3>Your Gold: <img src="https://cdn4.vectorstock.com/i/thumb-large/90/53/coin-gold-pixelated-icon-vector-11699053.jpg" height="50px" alt="gold coin" /> <c:out value="${gold}"/></h3>
+			</div>
+			<div class="col">
+			<form action="/reset" method="POST">
+				<input type="submit" value="Start a New Game" class="btn btn-danger"/>
+			</form>
+			</div>
 		</div>
 		<div id="playField" class="row mb-5">
 			<div class="col pt-5 pb-5 border rounded text-center farmBackground">
