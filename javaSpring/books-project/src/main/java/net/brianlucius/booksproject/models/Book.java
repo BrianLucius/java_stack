@@ -21,16 +21,16 @@ public class Book {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	@NotNull
-	@Size(min=5, max=200)
+	@Size(min=5, max=200, message="Title must be more than 5 characters")
 	private String title;
 	@NotNull
-	@Size(min=5, max=200)
+	@Size(min=5, max=200, message="Description must be more than 5 characters")
 	private String description;
 	@NotNull
-	@Size(min=3, max=40)
+	@Size(min=3, max=40, message="Language must be more than 3 characters")
 	private String language;
-	@NotNull
-	@Min(100)
+	@NotNull(message="Number of pages can not be empty")
+	@Min(value=100, message="Number of pages must be greater than 100")
 	private Integer numberOfPages;
 	// This will not allow the createAt column to be updated after creation
 	@Column(updatable=false)
