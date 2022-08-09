@@ -40,6 +40,9 @@
 			         </c:forEach>
 			    </tbody>
 		    </table>
+		    <div>
+		    <h4><a href="/books/new">Add your favorite book!</a></h4>
+		    </div>
 		</div>
 	</div>
 </body>
