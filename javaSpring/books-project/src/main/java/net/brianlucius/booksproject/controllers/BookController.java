@@ -1,5 +1,7 @@
 package net.brianlucius.booksproject.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,13 +20,17 @@ public class BookController {
 	@GetMapping("/books/{id}")
 	public String showBook(@PathVariable(value="id") Long id, Model model) {
 		Book book = bookService.findBook(id);
-
-//		model.addAttribute("title", book.getTitle());
-//		model.addAttribute("description", book.getDescription());
-//		model.addAttribute("language", book.getLanguage());
-//		model.addAttribute("numberOfPages", book.getNumberOfPages());
 		
 		model.addAttribute("book", book);
 		return "show.jsp";
 	}
+	
+	@GetMapping(value={"/","/books"})
+	public String showAllBooks(Model model) {
+		List<Book> books = bookService.allBooks();
+
+		model.addAttribute("booksList", books);
+		return "index.jsp";
+	}
+	
 }

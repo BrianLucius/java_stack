@@ -20,6 +20,7 @@
 		<h3>Description: <c:out value="${book.description}"/></h3>
 		<h3>Language: <c:out value="${book.language}"/></h3>
 		<h3>Number of Pages: <c:out value="${book.numberOfPages}"/></h3>
+		<a href="/books">Go Back to Index</a>
 	</div>
 </body>
 </html>
