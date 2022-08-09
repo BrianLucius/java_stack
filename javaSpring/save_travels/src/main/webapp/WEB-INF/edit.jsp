@@ -13,43 +13,18 @@
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
-<title>Save Travels</title>
+<title>Edit My Task</title>
 </head>
 <body>
 	<div class="container mt-5 w-50">
 		<div>
-			<h1 class="mb-2">All Expenses</h1>
+			<h1 class="mb-2">Edit Expense</h1>
+			<a href="/expenses">Go Back</a>
 		</div>
-		<div class="border rounded mb-5">
-			<table class="table table-hover table-striped">
-			    <thead>
-			        <tr>
-			            <th>Expense</th>
-			            <th>Vendor</th>
-			            <th>Amount</th>
-			            <th>Actions</th>
-			        </tr>
-			    </thead>
-			    <tbody>
-			         <c:forEach var="expense" items="${expensesList}">
-			         	<tr>
-			         		<td><a href="/expenses/${expense.id}"><c:out value="${expense.expenseName}"/></a></td>
-			         		<td><c:out value="${expense.vendor}"/></td>
-			         		<td><fmt:formatNumber type="currency" value="${expense.amount}"/></td>
-			         		<td><a href="/expenses/edit/${expense.id}">Edit</a>
-			         		<form action="/expenses/${expense.id}" method="POST">
-							    <input type="hidden" name="_method" value="DELETE">
-							    <input type="submit" class="btn btn-sm btn-danger" value="Delete">
-							</form></td>
-			         	</tr>
-			         </c:forEach>
-			    </tbody>
-		    </table>
-		 </div>
 		 <div>
-		    <h2 class="mb-2">Add an expense:</h2>
 	    	<div class="border rounded border-primary p-3">
-				<form:form action="/expenses" method="POST" modelAttribute="expense">
+				<form:form action="/expenses/${expense.id}" method="POST" modelAttribute="expense">
+				<input type="hidden" name="_method" value="PUT">
 					<div class="mb-3">
 						<form:label class="form-label" path="expenseName">Expense Name:</form:label>
 						<form:errors path="expenseName" class="text-danger"/>
