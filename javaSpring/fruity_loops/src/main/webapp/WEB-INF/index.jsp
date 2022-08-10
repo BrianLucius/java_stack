@@ -32,7 +32,7 @@
 						<c:forEach var="fruit" items="${fruitsList}">
 							<tr>
 								<td><c:out value="${fruit.name}"/></td>
-								<td>$<fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${fruit.price}"/></td>
+								<td><fmt:formatNumber type="currency" value="${fruit.price}"/></td>
 							</tr>
 						</c:forEach>
 					</tbody>
