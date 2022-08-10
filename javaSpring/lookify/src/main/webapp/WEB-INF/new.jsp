@@ -17,11 +17,21 @@
 </head>
 <body>
 	<div class="container mt-5 w-50">
-		<div>
-			<a href="/dashboard">Dashboard</a>
-		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark mb-3" style="background-color: rebeccapurple">
+			<div class="container-fluid">
+				<a class="navbar-brand">Lookify!</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			      <span class="navbar-toggler-icon"></span>
+			    </button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			        <div class="navbar-nav">
+				          <a class="nav-link" href="/dashboard">Dashboard</a>
+			        </div>
+		        </div>
+			</div>
+		</nav>
 		 <div>
-	    	<div class="border rounded border-primary p-3">
+	    	<div class="border rounded border-primary p-3 shadow">
 				<form:form action="/songs/new" method="POST" modelAttribute="song">
 					<div class="mb-3">
 						<form:label class="form-label" path="title">Title:</form:label>
@@ -38,7 +48,7 @@
 						<form:errors path="rating" class="text-danger"/>
 						<form:input class="form-control" type="number" path="rating" id="" />
 					</div>
-					<input class="button btn-success p-2" type="submit" value="Add Song" />
+					<input class="button btn-success p-2" type="submit" value="Add New Song" />
 				</form:form>
 			</div>
 		</div>

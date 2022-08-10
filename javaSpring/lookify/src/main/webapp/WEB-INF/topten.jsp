@@ -13,14 +13,24 @@
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
-<title>Search</title>
+<title>Top Ten Songs!</title>
 </head>
 <body>
 	<div class="container mt-5 w-50">
-		<div>
-			<h5>Top Ten Songs</h5>
-			<a href="/dashboard">Dashboard</a>
-		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark mb-3" style="background-color: rebeccapurple">
+			<div class="container-fluid">
+				<a class="navbar-brand">Lookify!</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			      	<span class="navbar-toggler-icon"></span>
+			    </button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			        <div class="navbar-nav">
+				          <a class="nav-link" href="/dashboard">Dashboard</a>
+			        </div>
+		        </div>
+				<span class="navbar-text">Top Ten Songs</span>
+			</div>
+		</nav>
 		<div class="border rounded mb-5">
 			<ul style="list-style: none;">
 				<c:forEach var="song" items="${songList}">

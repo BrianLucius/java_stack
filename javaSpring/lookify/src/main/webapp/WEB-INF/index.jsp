@@ -16,11 +16,11 @@
 <title>Lookify!</title>
 </head>
 <body>
-	<div class="container mt-5 w-50 text-center">
-		<div>
-			<h1 class="mb-2">Welcome to Lookify!</h1>
+	<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+		<div class="mb-5">
+			<h1>Welcome to Lookify!</h1>
 		</div>
-		<div class="border rounded mb-5">
+		<div class="mt-5">
 			<h4><a href="/dashboard">Start Looking!</a></h4>
 		</div>
 	</div>

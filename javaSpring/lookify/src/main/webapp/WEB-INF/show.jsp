@@ -16,19 +16,29 @@
 </head>
 <body>
 	<div class="container mt-5 w-50">
-		<div>
-			<a href="/dashboard">Dashboard</a>
-		</div>
-		<div class="border rounded border-primary p-3 ">
+				<nav class="navbar navbar-expand-lg navbar-dark mb-3" style="background-color: rebeccapurple">
+			<div class="container-fluid">
+				<a class="navbar-brand">Lookify!</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			      <span class="navbar-toggler-icon"></span>
+			    </button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			        <div class="navbar-nav">
+				          <a class="nav-link" href="/dashboard">Dashboard</a>
+			        </div>
+		        </div>
+			</div>
+		</nav>
+		<div class="border rounded border-primary p-3 shadow">
 			<h3>Title: <c:out value="${song.title}"/></h3>
 			<h3>Artist: <c:out value="${song.artist}"/></h3>
 			<h3>Rating: <c:out value="${song.rating}"/></h3>
-		</div>
-		<div>
-			<form action="/songs/${song.id}" method="POST">
-			    <input type="hidden" name="_method" value="DELETE">
-			    <input type="submit" class="btn btn-sm btn-danger" value="Delete">
-			</form>
+			<div>
+				<form action="/songs/${song.id}" method="POST">
+				    <input type="hidden" name="_method" value="DELETE">
+				    <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+				</form>
+			</div>
 		</div>
 	</div>
 </body>

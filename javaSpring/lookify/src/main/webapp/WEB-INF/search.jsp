@@ -16,17 +16,27 @@
 <title>Search</title>
 </head>
 <body>
-	<div class="container mt-5 w-50">
-		<div>
-			<h4>Songs by Artist Containing "<c:out value="${searchArtist}"/>"</h4>
-			<form action="/search">
-				<input type="text" name="artist" />
-				<input type="submit" value="Search Artists" />
-			</form>
-			<a href="/dashboard">Dashboard</a>
-		</div>
+	<div class="container mt-5 w-75">
+		<nav class="navbar navbar-expand-lg navbar-dark mb-3" style="background-color: rebeccapurple">
+			<div class="container-fluid">
+				<a class="navbar-brand">Lookify!</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			      <span class="navbar-toggler-icon"></span>
+			    </button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			        <div class="navbar-nav">
+				          <a class="nav-link" href="/dashboard">Dashboard</a>
+			        </div>
+		        </div>
+			    <span class="navbar-text p-2">Songs by Artist Containing "<c:out value="${searchArtist}"/>"</span>
+			    <form class="d-flex" role="search" action="/search">
+			      <input class="form-control me-2" type="search" placeholder="Search Artists..." aria-label="Search" name="artist">
+			      <button class="btn btn-sm btn-success" type="submit">Search</button>
+			    </form>
+			</div>
+		</nav>
 		<div class="border rounded mb-5">
-			<table class="table table-hover table-striped">
+			<table class="table table-hover table-striped mb-0">
 			    <thead>
 			        <tr>
 			            <th>Name</th>
