@@ -57,6 +57,9 @@
 			         </c:forEach>
 			    </tbody>
 		    </table>
+		    <c:if test="${empty songList}">
+		    	<h3 class="text-center m-3">No songs found &#128577;! Please Search Again.</h3>
+		    </c:if>
 		 </div>
 	</div>
 </body>
