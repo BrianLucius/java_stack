@@ -17,6 +17,9 @@
 <body>
 	<div class="container mt-5 w-50">
 		<div>
+			<a href="/donations/add">Add Donation</a>
+		</div>
+		<div>
 			<h1>All Donations</h1>
 		</div>
 		<div class="border rounded">
@@ -31,7 +34,7 @@
 			    <tbody>
 			         <c:forEach var="donation" items="${donationList}">
 			         	<tr>
-			         		<td><c:out value="${donation.donationName}"/></td>
+			         		<td><a href="/donations/${donation.id}"><c:out value="${donation.donationName}"/></a></td>
 			         		<td><c:out value="${donation.quantity}"/></td>
 			         		<td><c:out value="${donation.donor}"/></td>
 			         	</tr>

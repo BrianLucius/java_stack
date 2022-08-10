@@ -42,6 +42,7 @@ public class DonationService {
 			}
 		}
 		
+		// API version
 		public Donation updateDonation(Long id, String donationName, Integer quantity, String donor) {
 			Donation foundDonation = this.getOneDonation(id);
 			foundDonation.setDonationName(donationName);
@@ -52,5 +53,10 @@ public class DonationService {
 		
 		public void deleteDonation(Long id) {
 			donationRepository.deleteById(id);
+		}
+		
+		// update one - front end
+		public Donation updateFrontEndDonation(Donation donation) {
+			return donationRepository.save(donation);
 		}
 }
