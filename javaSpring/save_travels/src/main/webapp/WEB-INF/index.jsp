@@ -36,10 +36,10 @@
 			         		<td><a href="/expenses/${expense.id}"><c:out value="${expense.expenseName}"/></a></td>
 			         		<td><c:out value="${expense.vendor}"/></td>
 			         		<td><fmt:formatNumber type="currency" value="${expense.amount}"/></td>
-			         		<td><a href="/expenses/edit/${expense.id}">Edit</a></td>
+			         		<td><a class="btn btn-sm btn-outline-success" href="/expenses/edit/${expense.id}">Edit</a></td>
 			         		<td><form action="/expenses/${expense.id}" method="POST">
 							    <input type="hidden" name="_method" value="DELETE">
-							    <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+							    <input type="submit" class="btn btn-sm btn-outline-danger" value="Delete">
 							</form></td>
 			         	</tr>
 			         </c:forEach>
