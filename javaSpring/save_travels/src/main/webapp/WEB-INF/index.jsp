@@ -21,13 +21,13 @@
 			<h1 class="mb-2">All Expenses</h1>
 		</div>
 		<div class="border rounded mb-5">
-			<table class="table table-hover table-striped">
-			    <thead>
+			<table class="table table-hover table-striped mb-0 shadow">
+			    <thead class="text-center">
 			        <tr>
 			            <th>Expense</th>
 			            <th>Vendor</th>
 			            <th>Amount</th>
-			            <th>Actions</th>
+			            <th colspan="2">Actions</th>
 			        </tr>
 			    </thead>
 			    <tbody>
@@ -36,8 +36,8 @@
 			         		<td><a href="/expenses/${expense.id}"><c:out value="${expense.expenseName}"/></a></td>
 			         		<td><c:out value="${expense.vendor}"/></td>
 			         		<td><fmt:formatNumber type="currency" value="${expense.amount}"/></td>
-			         		<td><a href="/expenses/edit/${expense.id}">Edit</a>
-			         		<form action="/expenses/${expense.id}" method="POST">
+			         		<td><a href="/expenses/edit/${expense.id}">Edit</a></td>
+			         		<td><form action="/expenses/${expense.id}" method="POST">
 							    <input type="hidden" name="_method" value="DELETE">
 							    <input type="submit" class="btn btn-sm btn-danger" value="Delete">
 							</form></td>
@@ -47,8 +47,8 @@
 		    </table>
 		 </div>
 		 <div>
-		    <h2 class="mb-2">Add an expense:</h2>
-	    	<div class="border rounded border-primary p-3">
+		    <h2 class="mb-2">Add an Expense:</h2>
+	    	<div class="border rounded border-primary p-3 shadow">
 				<form:form action="/expenses" method="POST" modelAttribute="expense">
 					<div class="mb-3">
 						<form:label class="form-label" path="expenseName">Expense Name:</form:label>

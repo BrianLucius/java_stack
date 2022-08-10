@@ -17,12 +17,16 @@
 </head>
 <body>
 	<div class="container mt-5 w-50">
-		<div>
-			<h1 class="mb-2">Edit Expense</h1>
-			<a href="/expenses">Go Back</a>
+		<div class="row align-items-center">
+			<div class="col">
+				<h1 class="mb-2">Edit Expense</h1>
+			</div>
+			<div class="col-2">
+				<a href="/expenses">Go Back</a>
+			</div>
 		</div>
 		 <div>
-	    	<div class="border rounded border-primary p-3">
+	    	<div class="border rounded border-primary p-3 shadow">
 				<form:form action="/expenses/${expense.id}" method="POST" modelAttribute="expense">
 				<input type="hidden" name="_method" value="PUT">
 					<div class="mb-3">

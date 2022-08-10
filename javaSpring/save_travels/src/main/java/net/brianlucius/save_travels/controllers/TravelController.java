@@ -33,8 +33,10 @@ public class TravelController {
 
 	@PostMapping("/expenses")
 	public String create(@Valid @ModelAttribute("expense") Expense expense,
-			BindingResult result) {
+			BindingResult result, Model model) {
 		if (result.hasErrors()) {
+			List<Expense> expensesList = expenseService.allExpenses();
+			model.addAttribute("expensesList", expensesList);
 			return "index.jsp";
 		}
 		expenseService.createExpense(expense);

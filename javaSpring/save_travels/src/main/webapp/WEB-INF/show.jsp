@@ -16,13 +16,21 @@
 </head>
 <body>
 	<div class="container mt-5 w-50">
-		<div class="border rounded border-warning p-3 ">
-			<h1>Expense Details</h1>
-			<a href="/expenses">Go Back</a>
-			<h3>Expense Name: <c:out value="${expense.expenseName}"/></h3>
-			<h3>Expense Description: <c:out value="${expense.description}"/></h3>
-			<h3>Vendor: <c:out value="${expense.vendor}"/></h3>
-			<h3>Amount Spent: <fmt:formatNumber type="currency" value="${expense.amount}"/></h3>
+		<div class="border rounded border-warning p-3 shadow">
+			<div class="row align-items-center border-bottom">
+				<div class="col">
+					<h1>Expense Details</h1>
+				</div>
+				<div class="col-2">
+					<a href="/expenses">Go Back</a>
+				</div>
+			</div>
+			<div class="mt-3">
+				<h3>Expense Name: <c:out value="${expense.expenseName}"/></h3>
+				<h3>Expense Description: <c:out value="${expense.description}"/></h3>
+				<h3>Vendor: <c:out value="${expense.vendor}"/></h3>
+				<h3>Amount Spent: <fmt:formatNumber type="currency" value="${expense.amount}"/></h3>
+			</div>
 		</div>
 	</div>
 </body>
