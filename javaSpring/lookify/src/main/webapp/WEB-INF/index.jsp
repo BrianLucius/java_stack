@@ -18,7 +18,7 @@
 <body>
 	<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
 		<div class="mb-5">
-			<h1>Welcome to Lookify!</h1>
+			<h1 style="color: rebeccapurple; text-shadow: 6px 6px 5px #888888; font-size: 5rem;">Welcome to Lookify!</h1>
 		</div>
 		<div class="mt-5">
 			<h4><a href="/dashboard">Start Looking!</a></h4>

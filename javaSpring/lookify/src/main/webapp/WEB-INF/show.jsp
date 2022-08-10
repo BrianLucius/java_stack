@@ -36,7 +36,7 @@
 			<div>
 				<form action="/songs/${song.id}" method="POST">
 				    <input type="hidden" name="_method" value="DELETE">
-				    <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+				    <input type="submit" class="btn btn-sm btn-outline-danger" value="Delete">
 				</form>
 			</div>
 		</div>

@@ -48,7 +48,7 @@
 						<form:errors path="rating" class="text-danger"/>
 						<form:input class="form-control" type="number" path="rating" id="" />
 					</div>
-					<input class="button btn-success p-2" type="submit" value="Add New Song" />
+					<input class="btn btn-outline-success p-2" type="submit" value="Add New Song" />
 				</form:form>
 			</div>
 		</div>
