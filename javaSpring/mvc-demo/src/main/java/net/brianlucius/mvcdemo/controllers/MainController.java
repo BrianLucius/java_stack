@@ -107,7 +107,8 @@ public class MainController {
 		return "editPage.jsp";
 	}
 	// process the form
-	
+	// Note: this *could* be a Post mapping and remove the hidden attribute in the form. This would still
+	// work. However, it does violate convention having separate post (add records) and put (update records).
 	@PutMapping("/donations/edit/{id}")
 	public String processEdit(@Valid @ModelAttribute("donation") Donation donation, BindingResult result) {
 		if (result.hasErrors()) {
@@ -118,6 +119,10 @@ public class MainController {
 		}	
 	}
 	
+	// ----- Delete -----
+	// Note: this *could* be a Get mapping and use an href in front end. Again, this violates convention. 
+	// Even more so, if any references to /donations/delete/{id} are entered in a browser, the delete would
+	// occur without any validation (browser requests are get).
 	@DeleteMapping("/donations/{id}")
 	public String processDelete(@PathVariable("id") Long id) {
 		donationService.deleteDonation(id);
@@ -125,5 +130,31 @@ public class MainController {
 	}
 	
 	
+	// ------- Table and Create on same page -----
+	@GetMapping("/unified")
+	public String inde(Model model) {
+		model.addAttribute("donationList", donationService.allDonations());  //adds the list of donations for dashboard
+		model.addAttribute("donation", new Donation());		//creates empty donation object for form rendering
+		return "main.jsp";
+	}
+	
+	@PostMapping("/unified")
+	//order of below params matters!
+	public String processMainPageCreate(@Valid @ModelAttribute("donation") Donation donation, BindingResult result, Model model) {  
+		if (result.hasErrors()) {
+			model.addAttribute("donationList", donationService.allDonations());
+			return "main.jsp";
+		} else {
+			donationService.createDonation(donation);
+			return "redirect:/unified";
+		}		
+	}
+	
+	@GetMapping("/testQuery")
+	public String testQueryMethod(Model model) {
+		List<Donation> donationList = donationService.testQuery();
+		model.addAttribute("donationList", donationList);
+		return "testQueryPage.jsp";		
+	}
 	
 }

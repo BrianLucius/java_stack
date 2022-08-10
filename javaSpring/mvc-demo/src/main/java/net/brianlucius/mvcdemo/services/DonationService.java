@@ -59,4 +59,9 @@ public class DonationService {
 		public Donation updateFrontEndDonation(Donation donation) {
 			return donationRepository.save(donation);
 		}
+		
+		// testQueries
+		public List<Donation> testQuery(){
+			return donationRepository.callThisAnything();
+		}
 }
