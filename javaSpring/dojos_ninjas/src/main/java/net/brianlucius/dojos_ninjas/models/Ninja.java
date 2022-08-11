@@ -1,0 +1,112 @@
+package net.brianlucius.dojos_ninjas.models;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
+import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name="ninja")
+public class Ninja {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long id;
+	@NotNull
+	@Size(min=2, max=255, message="First name must be more than 2 letters")
+	private String firstName;
+	@NotNull
+	@Size(min=2, max=255, message="Last name must be more than 2 letters")
+	private String lastName;
+	@NotNull(message="Age cannot be empty")
+	@Min(value=1, message="Age must be between 1 and 99")
+	@Max(value=99, message="Age must be between 1 and 99")
+	private Integer age;
+	@Column(updatable=false)
+	private Date createdAt;
+	private Date updatedAt;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="dojo_id")
+	private Dojo dojo;
+	
+	public Ninja() {
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+	
+	public Dojo getDojo() {
+		return dojo;
+	}
+
+	public void setDojo(Dojo dojo) {
+		this.dojo = dojo;
+	}
+
+	@PrePersist
+	protected void onCreate() {
+		this.createdAt = new Date();
+	}
+	
+	@PreUpdate
+	protected void onUpdate() {
+		this.updatedAt = new Date();
+	}
+}
