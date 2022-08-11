@@ -11,7 +11,10 @@
 </head>
 <body>
 	<h1>Add New Donation</h1>
-	<form:form action="/add/donations" method="post" modelAttribute="donation">
+	<form:form action="/edit/donations/${donation.id}" method="post" modelAttribute="donation">
+	<input type="hidden" name="_method" value="put"/>
+		<form:hidden path="donor" />
+		<p>Donor: <c:out value="${donation.donor.username}"></c:out></p>
 		<div>
 			<form:label path="donationName">Donation Name:</form:label>
 			<form:input type="text" path="donationName"/>
@@ -22,14 +25,8 @@
 			<form:input type="text" path="quantity"/>
 			<form:errors path="quantity"/>
 		</div>
-		<div>
-			<form:select path="donor">
-				<c:forEach var="user" items="${userList}">
-					<form:option value="${user.id}">${user.username}</form:option>
-				</c:forEach>
-			</form:select>
-		</div>
-		<input type="submit" value="Add Donation" />
+
+		<input type="submit" value="Update Donation" />
 	</form:form>
 	<a href="/">Back to Dashboard</a>
 </body>

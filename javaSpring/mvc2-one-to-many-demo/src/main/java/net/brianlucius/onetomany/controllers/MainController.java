@@ -10,7 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import net.brianlucius.onetomany.models.Donation;
 import net.brianlucius.onetomany.models.User;
@@ -27,8 +29,18 @@ public class MainController {
 	private DonationService donationService;
 	
 	@GetMapping("/")
-	public String index() {
+	public String index(Model model) {
+		model.addAttribute("donationList", donationService.allDonations());
+		model.addAttribute("userList", userService.allUsers());
 		return "dashboard.jsp";
+	}
+	
+	// ----- Create User -----
+	// Render the form
+	@GetMapping("/users/{id}")
+	public String renderUserDetails(@PathVariable("id") Long id, Model model) {
+		model.addAttribute("user", userService.oneUser(id));
+		return "userDetails.jsp";
 	}
 	
 	// ----- Create User -----
@@ -70,5 +82,20 @@ public class MainController {
 		}
 	}
 	
+	// ----- Edit find one and save ----
+	@GetMapping("/edit/donations/{id}")
+	public String renderEditDonation(@PathVariable("id") Long id, Model model) {
+		model.addAttribute("donation", donationService.getOneDonation(id));
+		return "editDonation.jsp";
+	}
+	
+	@PutMapping("/edit/donations/{id}")
+	public String updateDonation(@Valid @ModelAttribute("donation") Donation donation, BindingResult result) {
+		if (result.hasErrors()) {
+			return "editDonation.jsp";
+		}
+		donationService.saveDonation(donation);
+		return "redirect:/";
+	}
 	
 }

@@ -1,6 +1,7 @@
 package net.brianlucius.onetomany.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,4 +23,11 @@ public class DonationService {
 		return donationRepository.save(donation);
 	}
 
+	public Donation getOneDonation(Long id) {
+		Optional<Donation> optionalDonation = donationRepository.findById(id);
+		if(optionalDonation.isPresent()){
+			return optionalDonation.get();
+		}
+		return null;
+	}
 }

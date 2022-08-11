@@ -24,5 +24,6 @@
 		</div>
 		<input type="submit" value="Create" />
 	</form:form>
+	<a href="/">Back to Dashboard</a>
 </body>
 </html>
