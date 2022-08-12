@@ -40,9 +40,7 @@ public class UserService {
         // Hash and set password, save user to database
 		String hashed = BCrypt.hashpw(newUser.getPassword(), BCrypt.gensalt());
 		newUser.setPassword(hashed);
-		userRepository.save(newUser);
-		
-		return null;
+		return userRepository.save(newUser);
 	}
 	
 	public User login(LoginUser newLoginObject, BindingResult result) {
@@ -65,7 +63,10 @@ public class UserService {
 		    result.rejectValue("loginError", "Matches", "There was an error logging you in. Check your username and password.");
 		}
 
-        // Return null if result has errors
+		if(result.hasErrors()) {
+    		return null;
+    	}
+		// Return null if result has errors
         // Otherwise, return the user object
 		return user;
 	}
