@@ -68,7 +68,7 @@ public class BookshelfController {
     	if(result.hasErrors()) {
     		return "addBook.jsp";
     	}
-    	User user = userService.getOneById((Long) session.getAttribute("user_id"));
+    	User user = userService.getUserById((Long) session.getAttribute("user_id"));
     	book.setPostedBy(user);
     	bookService.createBook(book);
     	return "redirect:/books";
@@ -95,7 +95,7 @@ public class BookshelfController {
     	if(result.hasErrors()) {
     		return "editBook.jsp";
     	}
-    	User user = userService.getOneById((Long) session.getAttribute("user_id"));
+    	User user = userService.getUserById((Long) session.getAttribute("user_id"));
     	book.setPostedBy(user);
     	bookService.createBook(book);
     	return "redirect:/books/"+id;

@@ -1,10 +1,10 @@
-package net.brianlucius.authentication;
+package net.brianlucius.bookclub;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AuthenticationApplicationTests {
+class BookClubApplicationTests {
 
 	@Test
 	void contextLoads() {

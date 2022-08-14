@@ -71,7 +71,7 @@ public class UserService {
 		return user;
 	}
 	
-	public User getOneById(Long id) {
+	public User getUserById(Long id) {
 		Optional<User> user = userRepository.findById(id);
 		if(!user.isPresent()) {
 			return null;

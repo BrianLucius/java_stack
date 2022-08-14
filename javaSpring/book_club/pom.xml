@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>net.brianlucius.bookclub</groupId>
-	<artifactId>authentication</artifactId>
+	<artifactId>bookclub</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>authentication</name>
-	<description>Login and Authentication</description>
+	<name>Book Club</name>
+	<description>Book Club</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
