@@ -43,7 +43,6 @@ public class FeelzController {
 		}
 		if(result.hasErrors()) {
 			model.addAttribute("feelz", feelz);
-			System.out.println("hasErrors");
     		return "feelz.jsp";
     	}
 		feelz.setEmotion(feelz.getEmotion().toLowerCase());
