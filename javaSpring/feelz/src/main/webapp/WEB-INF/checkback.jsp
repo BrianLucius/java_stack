@@ -53,7 +53,7 @@
 			        <ul>
 			        	<li>This experiment will capture the latitude and longitude of your device if you voluntarily enable location services on your device/browser. If location services are not enabled, the latitude and longitude of your ISPs nearest Point of Presence is used instead.</li>
 			        	<li>The IP address assigned to your device by your Internet Service Provider is captured.</li>
-			        	<li>A unique browser identifier is collected based on the work of Hone, Inc. and the source can be found at: <a href="https://github.com/honeinc" target="_blank">https://github.com/honeinc/ubid</a>.<br>Much gratitude to the team at Hone, Inc.</li>
+			        	<li>A unique browser identifier is collected based on the work of Hone, Inc. and the source can be found at: <a href="https://github.com/honeinc/ubid" target="_blank">https://github.com/honeinc/ubid</a>.<br>Much gratitude to the team at Hone, Inc.</li>
 			        </ul>
 			        <p>None of the information collected will be sold or distributed to any other entity and is strictly for use in this capstone project by Brian Lucius.</p>
 			        <p>For questions, conversation, or employment consideration please read more about me on <a href="https://www.linkedin.com/in/brianjlucius/" target="_blank">LinkedIn</a>.</p>
