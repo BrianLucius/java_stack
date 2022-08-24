@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>net.brianlucius.feelz</groupId>
 	<artifactId>feelz</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>feelz</name>
 	<description>Feelz Social Sentiment Project</description>
@@ -85,7 +85,7 @@
             <groupId>org.mindrot</groupId>
             <artifactId>jbcrypt</artifactId>
             <version>0.4</version>
-        </dependency>
+        </dependency>		
 	</dependencies>
 
 	<build>

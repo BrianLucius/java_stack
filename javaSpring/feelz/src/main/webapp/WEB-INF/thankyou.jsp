@@ -4,7 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="/js/bubbleChart.js"></script>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/css/style.css"/>
 <meta charset="UTF-8">
@@ -17,7 +20,7 @@
 			<h4>How do <i>you</i> Feelz right now?</h4>
 		</div>
 		<div class="row d-flex justify-content-center">
-			<div class="col-md-4 border bg-white rounded shadow p-3">
+			<div id="content-box" class="col-md-4 border bg-white rounded shadow p-3">
 				<div class="text-center">
 					<div class="mb-4 mt-4">
 						<h4>Thank you for sharing your feelings!</h4>
@@ -27,6 +30,10 @@
 					</div>
 					<div class="mb-4">
 						<h4>Come back often to continue sharing.</h4>
+					</div>
+					<div class="mb-4">
+						<h4 id="bubble-chart-title"></h4> 
+						<svg id="bubble-chart"></svg>
 					</div>
 				</div>
 			</div>
