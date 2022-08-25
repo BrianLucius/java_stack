@@ -38,9 +38,10 @@ public class FeelzController {
 	
 	@PostMapping("/")
 	public String processFeelz(@Valid @ModelAttribute("feelz") Feelz feelz, BindingResult result, Model model, HttpSession session) {
-		if(session.getAttribute("feelz") == null) {
-			return "redirect:/";
-		}
+// Commented as people were saying they were unable to submit.
+//		if(session.getAttribute("feelz") == null) {
+//			return "redirect:/";
+//		}
 		if(result.hasErrors()) {
 			model.addAttribute("feelz", feelz);
     		return "feelz.jsp";

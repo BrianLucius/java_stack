@@ -1,3 +1,4 @@
+// Courtesy of https://www.webtips.dev/how-to-make-interactive-bubble-charts-in-d3-js
 const width = 500;
 const height = 500;
 const colors = {
@@ -68,11 +69,9 @@ function getTextWidth(text, font) {
   return metrics.width;
 }
 
-console.log(getTextWidth("hello there!", "1rem system-ui")); 
-
 async function renderBubbleChart() {
-//	fetch ('http://localhost:8080/api/trending')
-	fetch ('https://feelz.cc/api/trending')
+	fetch ('http://localhost:8080/api/trending')
+//	fetch ('https://feelz.cc/api/trending')
 		.then(function(response) {
 			return response.json();
 		})

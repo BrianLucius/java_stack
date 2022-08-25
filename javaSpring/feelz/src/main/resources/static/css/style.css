@@ -8,6 +8,12 @@ body {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
 .emoji {
   font-size: 2.5rem;
   vertical-align: center;

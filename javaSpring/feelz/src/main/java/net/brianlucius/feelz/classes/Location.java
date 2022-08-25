@@ -9,13 +9,18 @@ public class Location {
 	    public Location() {
 	    };
 
-	    public Location(String locType, Double lat, Double lon) {
-	    	type = locType;
-	        latitude = lat;
-	        longitude = lon;
+	    public Location(Double lat, Double lon) {
+	    	latitude = lat;
+	    	longitude = lon;
 	    }
 	    
-	    public String getLocType() {
+	    public Location(String locType, Double lat, Double lon) {
+	    	type = locType;
+	    	latitude = lat;
+	    	longitude = lon;
+	    }
+	    
+	    public String getType() {
 			return type;
 		}
 
@@ -27,7 +32,7 @@ public class Location {
 			return longitude;
 		}
 
-	    public void setLocType(String locType) {
+	    public void setType(String locType) {
 			type = locType;
 		}
 	    

@@ -16,6 +16,6 @@ public interface FeelzRepository extends CrudRepository<Feelz, Long> {
 	@Query(value="SELECT emotion, count(1) AS count FROM feelz WHERE create_date >= NOW() - INTERVAL 1 DAY GROUP BY emotion", nativeQuery=true)
 	List<Map<String, Integer>> trendingEmotions();
 	
-	List<BrowserLocation> findDistinctBy();
-	
+	List<BrowserLocation> findDistinctByBrowserLocationNotNull();
+		
 }

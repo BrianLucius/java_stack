@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.brianlucius.feelz.repositories.BrowserLocation;
+import net.brianlucius.feelz.classes.MapsLocation;
 import net.brianlucius.feelz.services.FeelzService;
 
 @RestController
@@ -24,7 +24,7 @@ public class FeelzAPI {
 	}
 	
 	@GetMapping("/location")
-	public List<BrowserLocation> location() {
+	public List<MapsLocation> location() {
 		return(feelzService.location());
 	}
 
