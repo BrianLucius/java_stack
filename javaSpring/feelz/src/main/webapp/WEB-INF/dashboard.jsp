@@ -19,7 +19,7 @@
 </head>
 <body>
 	<div class="container mt-5">		
-		<nav class="navbar navbar-expand-lg navbar-dark mb-3 rounded" style="background-color: cornflowerblue">
+		<nav class="navbar navbar-expand-lg navbar-dark mb-3 rounded">
 			<div class="container-fluid">
 				<a class="navbar-brand">Feelz Analytics</a>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -35,22 +35,23 @@
 		        </div>
 			</div>
 		</nav>
-		<div>
-			<h3>Welcome, let's get started:</h3>
-		</div>
 		<div class="border rounded shadow p-3">
+			<div class="row d-flex justify-content-center mb-3">
+				<h4>Total Feelz Submitted: ${totalSubmissions}</h4>
+			</div>
 			<div class="row d-flex justify-content-center">
-				<div class="col-md-5 border bg-white rounded shadow p-2 m-2">
+				<div class="col-md-5 border bg-white rounded mx-2">
 					<div class="m-2">
 						<h4 id="bubble-chart-title"></h4> 
 						<svg id="bubble-chart"></svg>
 					</div>
 				</div>
-				<div class="col-md-6 border bg-white rounded shadow p-2 m-2">
+				<div class="col-md-6 border bg-white rounded mx-2">
 					<div class="m-2">
-						<h4 id="map-title">Submissions Map</h4> 
+						<h4 id="map-title">Submit Locations</h4> 
 						<div id="map"></div>
 						<script id="mapsAPI" async></script>
+						<p class="text-center m-3"><img src="https://mt.googleapis.com/vt/icon/name=icons/spotlight/spotlight-poi.png&scale=.85" alt="Red Location Pin"/> GeoIP Location Service    <img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt="" />Device Location Services</p>
 					</div>
 				</div>
 		 	</div>

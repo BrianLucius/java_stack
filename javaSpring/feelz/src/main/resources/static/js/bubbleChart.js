@@ -70,8 +70,8 @@ function getTextWidth(text, font) {
 }
 
 async function renderBubbleChart() {
-	fetch ('http://localhost:8080/api/trending')
-//	fetch ('https://feelz.cc/api/trending')
+//	fetch ('http://localhost:8080/api/trending')
+	fetch ('https://feelz.cc/api/trending')
 		.then(function(response) {
 			return response.json();
 		})

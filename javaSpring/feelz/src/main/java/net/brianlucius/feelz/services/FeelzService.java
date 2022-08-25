@@ -39,7 +39,7 @@ public class FeelzService {
 		for (BrowserLocation location : locations) {		
 			try {
 				Location loc = mapper.readValue(location.getBrowserLocation(), Location.class);
-				locationsList.add(new MapsLocation(loc.getLatitude(), loc.getLongitude()));
+				locationsList.add(new MapsLocation(loc.getType(), loc.getLatitude(), loc.getLongitude()));
 			} catch (JsonMappingException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -50,6 +50,10 @@ public class FeelzService {
 		}
 				
 		return locationsList;
+	}
+	
+	public Long getTotalSubmissions() {
+		return feelzRepository.count();
 	}
 
 }

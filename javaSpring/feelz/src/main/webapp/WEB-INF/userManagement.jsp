@@ -17,8 +17,8 @@
 <title>Feelz Analytics | User Management</title>
 </head>
 <body>
-	<div class="container mt-5 w-75">		
-		<nav class="navbar navbar-expand-lg navbar-dark mb-3 rounded" style="background-color: cornflowerblue">
+	<div class="container mt-5">		
+		<nav class="navbar navbar-expand-lg navbar-dark mb-3 rounded">
 			<div class="container-fluid">
 				<a class="navbar-brand">Feelz Analytics</a>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">

@@ -14,6 +14,14 @@ body {
   width: 100%;
 }
 
+.navbar {
+	background-color: #123C8B;
+}
+
+.title {
+	color: #123C8B;
+}
+
 .emoji {
   font-size: 2.5rem;
   vertical-align: center;

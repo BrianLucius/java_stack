@@ -19,7 +19,7 @@
 <body>
 	<div class="container mt-5">
 		<div class="row">
-			<h1 style="color: cornflowerblue;">Feelz Analytics Portal</h1>
+			<h1 class="title">Feelz Analytics Portal</h1>
 		</div>
 		<div class="row">
 			<div class="col border rounded shadow p-3 m-5">
