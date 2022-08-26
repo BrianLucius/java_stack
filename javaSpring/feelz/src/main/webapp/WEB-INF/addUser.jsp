@@ -38,36 +38,48 @@
 			<h3>User Management</h3>
 		</div>
 		<div class="border rounded shadow p-3">
-			<table class="table table-hover table-striped">
-			    <thead>
-			        <tr>
-			            <th>First Name</th>
-			            <th>Last Name</th>
-			            <th>Email address</th>
-			            <th class="text-center" colspan=2>User Actions</th>
-			        </tr>
-			    </thead>
-			    <tbody>
-			         <c:forEach var="user" items="${usersList}">
-			         	<tr>
-			         		<td><c:out value="${user.firstName}"/></td>
-			         		<td><c:out value="${user.lastName}"/></td>
-			         		<td><c:out value="${user.email}"/></td>
-			         		<td><a class="btn btn-outline-success" href="/analytics_portal/usermanagement/edit/${user.id}">Edit User</a></td>
-			         		<td><c:if test="${user.id != user_id}">
-					         		<form:form action="/analytics_portal/usermanagement/delete/${user.id}" method="POST" modelAttribute="user">
-										<input type="hidden" name="_method" value="DELETE" />
-										<input class="btn btn-outline-danger" type="submit" value="Delete User" />
-									</form:form>
-			         			</c:if></td>
-			         	</tr>
-			         </c:forEach>
-			    </tbody>
-		    </table>
-		    <div>
-		    	<a class="btn btn-success" href="/analytics_portal/usermanagement/add">Add User</a>
-		 	</div>
-	    </div>
-  </div>
+			<form:form action="/analytics_portal/usermanagement/add" method="POST" modelAttribute="user">
+				<div class="mb-3">
+					<form:label class="form-label" path="firstName">First Name:</form:label>
+					<div>
+						<form:errors path="firstName" class="text-danger"/>
+					</div>
+					<form:input class="form-control" type="text" path="firstName"/>
+				</div>
+				<div class="mb-3">
+					<form:label class="form-label" path="lastName">Last Name:</form:label>
+					<div>
+						<form:errors path="lastName" class="text-danger"/>
+					</div>
+					<form:input class="form-control" type="text" path="lastName"/>
+				</div>
+				<div class="mb-3">
+					<form:label class="form-label" path="email">Email:</form:label>
+					<div>
+						<form:errors path="email" class="text-danger"/>
+					</div>
+					<form:input class="form-control" type="text" path="email"/>
+				</div>
+				<div class="mb-3">
+					<form:label class="form-label" path="password">Password:</form:label>
+					<div>
+						<form:errors path="password" class="text-danger"/>
+					</div>
+					<form:input class="form-control" type="password" path="password"/>
+				</div>
+				<div class="mb-3">
+					<form:label class="form-label" path="confirm">Confirm Password:</form:label>
+					<div>
+						<form:errors path="confirm" class="text-danger"/>
+					</div>
+					<form:input class="form-control" type="password" path="confirm"/>
+				</div>
+				<div>
+					<input class="btn btn-success" type="submit" value="Create User" />
+					<a class="btn btn-primary" href="/analytics_portal/usermanagement">Cancel</a>
+				</div>
+				</form:form>
+			</div>	        
+      </div>
 </body>
 </html>

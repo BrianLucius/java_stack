@@ -40,8 +40,8 @@ function initMap(data) {
 }
 
 async function renderSubmissionMap() {
-//	fetch ("http://localhost:8080/api/location")
-	fetch ('https://feelz.cc/api/location')
+	fetch ("http://localhost:8080/api/location")
+//	fetch ('https://feelz.cc/api/location')
 		.then(function(response) {
 			return response.json();
 		})

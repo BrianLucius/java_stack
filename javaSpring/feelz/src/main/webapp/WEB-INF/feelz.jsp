@@ -45,15 +45,15 @@
 		</div>
 		<div id="footer" class="mt-5">
 			<div class="text-center">
-				<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
+				<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#aboutModal">
 				  <b>About the Project</b>
 				</button>
 			</div>
-			<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalTitle" aria-hidden="true">
 			  <div class="modal-dialog modal-dialog-centered text-left" role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLongTitle">About This Project</h5>
+			        <h5 class="modal-title" id="aboutModalTitle">About This Project</h5>
 			        <button type="button" class="btn btn-lg close" data-bs-dismiss="modal" aria-label="Close">
 			          <span aria-hidden="true">&times;</span>
 			        </button>
