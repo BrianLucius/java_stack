@@ -7,7 +7,12 @@ and the empty methods below the constructor.
  * A class to represent a singly linked list and contain all of its methods.
  */
 
-
+ class ListNode{
+  constructor(data){
+      this.data = data;
+      this.next = null;
+  }  
+}
  class SLL {
     /**
      * Executed when the new keyword is used to construct a new Singly Linked List
@@ -56,7 +61,20 @@ and the empty methods below the constructor.
      * - Space: (?).
      * @returns {SinglyLinkedList} This list.
      */
-    reverse() {}
+    reverse() {
+      let prev = null;
+      let curr = this.head;
+      let nextNode;
+
+      while(curr) {
+        nextNode = curr.next
+        curr.next = prev
+        prev = curr
+        Curr = nextNode
+      }
+
+      return this.prev;
+    }
     
     /**
      * Determines whether the list has a loop in it which would result in
@@ -78,6 +96,9 @@ and the empty methods below the constructor.
   list1.insertAtBack(2);
   list1.insertAtBack(-7);
   list1.insertAtBack(1);
+
+  list1.printList();
+  list1.reverse();
   
   // Edge cases for removeNegative
   // 1. if 2 negative numbers are next to each other
